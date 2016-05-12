@@ -1,0 +1,61 @@
+.registration {
+    padding-top: 60px;
+}
+.registration .wrapper {
+    padding-top: 40px;
+}
+.registration h3 {
+    /* text-align: center; */  
+    /* font-size: 18px; */  
+    /* color: #F58426; */  
+    /* padding-bottom: 15px; */  
+    /* text-transform: uppercase; */
+}
+.registration h6 {
+    /* font-family: 'ProximaNova-Bold', sans-serif; */
+    /* font-size: 18px; */
+    /* color:  #F58426; */
+    /* text-align: center; */
+    /* text-transform: none; */
+    /* margin: 15px 0; */
+    
+}
+.registration .loyalty_pays {
+    text-align: center;
+    background: #E46552;
+    color: #fff;
+    padding: 30px 20px 35px;
+    position: relative;
+    bottom: 75px;
+}
+.registration .loyalty_pays span {
+    font-size: 40px;
+    font-family: 'ProximaNova-Black', sans-serif;
+}
+.registration .loyalty_pays p {
+    font-family: 'BodoniFLF-Roman', sans-serif;
+    margin-top: 10px;
+    color: #fff;
+    line-height: 22px;
+    padding-bottom: 0;
+    margin: 24px 0 0;
+}
+.registration form p {
+    /* font-size: 18px; */
+    color: #A1A1A4;
+    text-align: center;
+    margin: 15px 0;
+}
+.registration .items_form .city,
+.registration .items_form .postcode {
+    display: inline-block;
+    margin: 0;
+    width: 144px;
+}
+.registration .items_form .city {
+    margin-left: 160px;
+    
+}
+.registration .items_form .postcode {
+    margin-left: 7px;
+}

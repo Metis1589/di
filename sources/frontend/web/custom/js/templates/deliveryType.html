@@ -1,0 +1,41 @@
+<div ng-class="cssClass"
+    id="{{elementId}}">
+    <span
+            class="delivery_asap_title"
+            ng-click="openSelectDelivery($event)"
+            ng-show="!selectDeliveryOpened && !selectTimeOpened"
+            >{{typeList[selectedType] | uppercase}}</span>
+    <ul class="delivery_asap_menu main_page_submenu" ng-show="selectDeliveryOpened && !selectTimeOpened">
+        <li class="asap_menu_item" ng-repeat="typeKey in typeOrder">
+            <a  ng-click="selectDeliveryType($event,typeKey)">{{typeList[typeKey] | uppercase}}</a>
+        </li>
+    </ul>
+    <div ng-repeat="typeKey in typeOrder"
+         ng-class="getTypeClass(typeKey)"
+         ng-show="isDateType(typeKey) && selectedType == typeKey && selectTimeOpened">
+        <span ng-click="spanClicked($event)">{{typeList[typeKey] | uppercase}}</span>
+        <div>
+            <dinein-select
+                    class="date_time slset"
+                    ng-if="isDateType(typeKey) && selectTimeOpened"
+                    items="dates"
+                    name="date"
+                    placeholder="deliveryDate ? deliveryDate : 'SELECT date'"
+                    ng-model="deliveryDate"
+                    on-select="selectDate(key,value)"
+                    ></dinein-select>
+            <dinein-select
+                    class="date_time slset"
+                    ng-if="isDateType(typeKey) && deliveryDate && selectTimeOpened"
+                    items="dateTime[deliveryDate]"
+                    name="time"
+                    placeholder="'SELECT time'"
+                    ng-model="deliveryTime"
+                    on-select="selectTime(key,value)"
+                    ></dinein-select>
+            <!--  -->
+            <!--<button type="button" class="apply" ng-show="deliveryDate != null && deliveryTime != null">APPLY</button>-->
+        </div>
+    </div>
+</div>
+

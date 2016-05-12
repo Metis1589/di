@@ -1,0 +1,142 @@
+.user_section .wrapper .content_set .point_balance span.point_balance {
+  font-size: 118px;
+  line-height: 142px;
+  color: #F58426;
+  font-family: 'ProximaNova-Bold', sans-serif;
+}
+
+.user_section .wrapper .slset {
+    margin-left: 13px;
+}
+
+.user_section .wrapper .first_section {
+    padding-top: 0;
+}
+.user_section.items_form .slset{
+    margin: 0 auto;
+    width: 300px;
+}
+.first_section{
+    padding-top: 100px;
+}
+.user_section .wrapper .content_set{
+    padding-top: 14px;
+}
+.user_section .wrapper .sidebar_set_outer .sidebar_set{
+    width: 480px;
+}
+
+.user_section .wrapper .sidebar_set .items_form input[type='text'].promo {
+    width: 195px;
+    float: none;
+    font-size: 14px;
+    background: url(../img/carret_right.png) 95% 50% no-repeat;
+}
+
+.user_section .wrapper .sidebar_set .items_form .sidebar_select .select_set_carret {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: -1px;
+    z-index: 11;
+    background: url(../img/carret_top-bottom.png) 50% no-repeat;
+}
+.user_section .wrapper .sidebar_set .items_form .sidebar_select .slset.opened .select_set_carret{
+    display: none;
+}
+
+.user_section .wrapper .sidebar_set .items_form .sidebar_select .delivery_asap_title{
+    display: block;
+    line-height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    letter-spacing: 2px;
+    width: 100%;
+    height: 30px;
+    position: relative;
+    z-index: 10;
+    background: #fff;
+    font-weight: 500;
+    background: url(../img/carret_top-bottom.png) 95% 50% no-repeat;
+    cursor: pointer;
+}
+.user_section .wrapper .sidebar_set .items_form .sidebar_select{
+    margin: 15px auto;
+    width: 195px;
+    float: none;
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    right: 0;
+    max-height: 500px;
+}
+.user_section .wrapper .sidebar_set .items_form .sidebar_select.opened {
+    padding: 0 5px 10px;
+}
+.user_section .wrapper .sidebar_set .items_form .sidebar_select > div > span{
+    color: #A1A1A4;
+    width: 100%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding: 14px 0 11px;
+    font-size: 14px;
+    border-bottom: solid 1px #A1A1A4;
+    background: none;
+    cursor: pointer;
+    display: block;
+}
+.user_section .wrapper .sidebar_set .items_form .sidebar_select .slset{
+    width: 90%;
+    margin: 15px auto;
+}
+.user_section .wrapper .content_set .user_question {
+    margin: 15px auto;
+    margin-bottom: 30px;
+}
+
+.user_section_some_review .review_title{
+    color: #F58426;
+    position: static;
+    font-family: 'ProximaNova-Bold', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    display: block;
+    text-transform: uppercase;
+}
+.user_section_some_review h5 {
+    padding: 0;
+}
+
+.menus.link_menu.active_item.open  ul.link_submenu  a.active{
+    color: #F58426;
+}
+
+.sidebar_select.slset.opened .main_page_submenu > li {
+    height: 40px;
+    display: block;
+    padding: 14px 0 10px;
+    margin: 0 auto;
+    line-height: 15px;
+}
+
+@media (max-width: 1100px) {
+    .first_section {
+        padding-top: 30px;
+    }
+    .restaurant_nav + .first_section{
+        padding-top: 30px;
+    }
+
+    .user_section .wrapper .content_set .point_balance span.point_balance {
+        font-size: 40px;
+        line-height: 25px;
+    }
+    .items_form.reviews .content_set h3 {
+        font-size: 12px;
+    }
+}

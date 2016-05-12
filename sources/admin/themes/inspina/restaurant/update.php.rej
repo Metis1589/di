@@ -1,0 +1,14 @@
+diff a/sources/admin/themes/inspina/restaurant/update.php b/sources/admin/themes/inspina/restaurant/update.php	(rejected hunks)
+@@ -23,10 +23,8 @@
+                         <div class="panel-options">
+                             <ul class="nav nav-tabs">
+                                 <li class="active"><a href="#tab-1" data-toggle="tab"><?= T::l('Restaurant') ?></a></li>
+-                                <li><a href="#tab-2" data-toggle="tab"><?= T::l('Order Contacts') ?></a></li>
+-                                <li><a href="#tab-3" data-toggle="tab"><?= T::l('Payment Details') ?></a></li>
+-                                <li><a href="#tab-4" data-toggle="tab"><?= T::l('Schedule') ?></a></li>
+-                                <li><a href="#tab-5" data-toggle="tab"><?= T::l('Delivery Info') ?></a></li>
++                                <li><a href="#tab-2" data-toggle="tab"><?= T::l('Schedule') ?></a></li>
++                                <li><a href="#tab-3" data-toggle="tab"><?= T::l('Delivery Info') ?></a></li>
+                             </ul>
+                         </div>
+                     </div>

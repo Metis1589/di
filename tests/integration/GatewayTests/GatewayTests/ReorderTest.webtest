@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="ReorderTest" Id="add96438-5fc6-462d-beff-521a9dc9c6b7" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.dc56c854-22a1-4bfa-9bce-35c0767f034c.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="POST" Guid="1e5bdb16-e651-4fb6-a171-92c29b0adfe0" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/login" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="username" Value="{{USERNAME}}" RecordedValue="svodotyka@apextech.com.ua1" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="password" Value="{{PASSWORD}}" RecordedValue="1234" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam1.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="4f8a6de6-faaa-478e-9178-f25e8f000b36" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/get-user-profile" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/user/user" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="8a036602-7dc9-479b-bd20-0dc2341e0364" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/get-user-addresses" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/user/user" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="04cab7e4-cf4f-4be1-af13-2bbe8b17ef78" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/get-user-orders" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/user/user" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="00b1d2b3-d986-4b87-bf2c-c9687d3eca53" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/reorder" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/user/user" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="order_id" Value="4{{CLIENT_KEY}}" RecordedValue="43" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam2.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="db5f897f-a75b-4aff-8663-13fc12df9c21" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/get-menus" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=1" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="restaurant_id" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="5a971736-7ce2-4641-b50e-c5fc04fa6db8" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/get-order" ThinkTime="8" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=1" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="restaurant_id" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="63ed6d41-7742-44db-849b-a2db45526c97" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/set-driver-charge" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=1" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="driver_charge" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam3.driver_charge}}" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam4.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="78f91a05-7b93-4496-bb54-62b0038b5df8" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/set-order-item" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=1" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="restaurant_id" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam5.restaurant_id}}" UrlEncode="True" />
+        <FormPostParameter Name="order_item_id" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam6.order_item_id}}" UrlEncode="True" />
+        <FormPostParameter Name="menu_item_id" Value="15" RecordedValue="15" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="quantity" Value="11" RecordedValue="11" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][name_key]" Value="Grated Cheese" RecordedValue="Grated Cheese" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][quantity]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam7.selected_options[0][quantity]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][$$hashKey]" Value="object:21{{CLIENT_KEY}}" RecordedValue="object:213" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][name_key]" Value="Shreded Lettuce" RecordedValue="Shreded Lettuce" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][quantity]" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam8.selected_options[1][quantity]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][$$hashKey]" Value="object:214" RecordedValue="object:214" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][name_key]" Value="Meat" RecordedValue="Meat" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][quantity]" Value="4" RecordedValue="4" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][$$hashKey]" Value="object:215" RecordedValue="object:215" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam9.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="fea57994-973b-47c1-ae02-de550bdef528" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/set-order-item" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=1" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="restaurant_id" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam10.restaurant_id}}" UrlEncode="True" />
+        <FormPostParameter Name="order_item_id" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam11.order_item_id}}" UrlEncode="True" />
+        <FormPostParameter Name="menu_item_id" Value="18" RecordedValue="18" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="quantity" Value="41" RecordedValue="41" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam12.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="43ec4a65-d4d5-4609-9c06-289b1078024b" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/get-order" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/order/checkout" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="68dd8398-c1b9-46b1-9bf5-8f9ed99cf24a" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/checkout" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/order/checkout" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="{&quot;status_code&quot;:0,&quot;data&quot;:true}" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <FormPostHttpBody>
+        <FormPostParameter Name="additional_requirements" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="include_utensils" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="billing_address" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam13.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+  </Items>
+  <ContextParameters>
+    <ContextParameter Name="USERNAME" Value="svodotyka@apextech.com.ua1" />
+    <ContextParameter Name="PASSWORD" Value="1234" />
+    <ContextParameter Name="CLIENT_KEY" Value="3" />
+    <ContextParameter Name="GATEWAY_SERVER" Value="http://gateway.dinein.loc" />
+    <ContextParameter Name="FRONTEND_SERVER" Value="http://frontend.dinein.loc" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

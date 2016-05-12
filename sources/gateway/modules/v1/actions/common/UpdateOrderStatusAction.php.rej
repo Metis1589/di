@@ -1,0 +1,10 @@
+diff a/sources/gateway/modules/v1/actions/common/UpdateOrderStatusAction.php b/sources/gateway/modules/v1/actions/common/UpdateOrderStatusAction.php	(rejected hunks)
+@@ -32,7 +32,7 @@ class UpdateOrderStatusAction extends PostApiAction {
+         try {
+ 
+             $order = \common\models\Order::find()->where(['id' => $requestForm->order_id])->with('restaurant')->one();
+-            $user  = $requestForm->getUser();
++            $user  = Yii::$app->user->identity;
+ 
+             OrderService::changeOrderStatus($order, $requestForm->order_status, $user->user_type, $user->id);
+ 

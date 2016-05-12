@@ -1,0 +1,1 @@
+var dineinApp = angular.module('dineinApp', ['xeditable']);

@@ -1,0 +1,9 @@
+<div class="js-title-menu"  ng-class="{disabled:!!disabled}">
+    <i class="select_set_carret"></i>
+    <span class="pseudo_input select-no-handler no-update">{{ngModel ? ngModel : placeholder}}</span>
+    <input ng-if="!required" type="text" name={{name}} ng-model="ngModel" placeholder="{{placeholder}}" ng-hide="true">
+    <input ng-if="required" type="text" name={{name}} ng-model="ngModel" placeholder="{{placeholder}}" ng-hide="true" required="" err-required="errRequired">
+    <ul style="display: none;" >
+        <li ng-repeat="key in keys" ng-click="setValue($event,key,items[key])">{{items[key]}}</li>
+    </ul>
+</div>

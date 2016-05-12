@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="WebTest1" Id="f60129ae-b73a-4899-ad56-c7af117ada62" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.a1133ca8-6871-4c45-b1f6-dbaaa323b895.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="06ad6dda-1c27-457c-8b34-b714802c82e3" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/restaurants-search" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/search" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="delivery_type" Value="DeliveryAsap" RecordedValue="DeliveryAsap" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="postcode" Value="n13ly" RecordedValue="n13ly" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="132e0709-af0f-4b3b-ab77-6482fe2cd289" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/get-menus" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=26" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="restaurant_id" Value="26" RecordedValue="26" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="b677b8fd-b402-484f-8484-806cff8c68fb" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/get-order" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=26" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+        <QueryStringParameter Name="restaurant_id" Value="26" RecordedValue="26" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="469d3da6-95dd-4931-ac7c-e8a2ec0be158" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/set-order-item" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=26" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="restaurant_id" Value="26" RecordedValue="26" CorrelationBinding="{{FormPostParam1.restaurant_id}}" UrlEncode="True" />
+        <FormPostParameter Name="order_item_id" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam2.order_item_id}}" UrlEncode="True" />
+        <FormPostParameter Name="menu_item_id" Value="15" RecordedValue="15" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="quantity" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam3.quantity}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][id]" Value="365" RecordedValue="365" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][parent_id]" Value="364" RecordedValue="364" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][copied_from_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][menu_item_id]" Value="15" RecordedValue="15" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][menu_option_category_type_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][max_category_items]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][name_key]" Value="Grated Cheese" RecordedValue="Grated Cheese" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][description_key]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][web_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][restaurant_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][is_default]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam4.selected_options[0][option][is_default]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][sort_order]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam5.selected_options[0][option][sort_order]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][record_type]" Value="Active" RecordedValue="Active" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][create_on]" Value="2015-04-06 14:21:03" RecordedValue="2015-04-06 14:21:03" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][last_update]" Value="2015-04-06 14:21:27" RecordedValue="2015-04-06 14:21:27" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][$$hashKey]" Value="object:100" RecordedValue="object:100" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][quantity]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam6.selected_options[0][quantity]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][$$hashKey]" Value="object:228" RecordedValue="object:228" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][id]" Value="366" RecordedValue="366" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][parent_id]" Value="364" RecordedValue="364" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][copied_from_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][menu_item_id]" Value="15" RecordedValue="15" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][menu_option_category_type_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][max_category_items]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][name_key]" Value="Shreded Lettuce" RecordedValue="Shreded Lettuce" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][description_key]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][web_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][restaurant_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][is_default]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam7.selected_options[1][option][is_default]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][sort_order]" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam8.selected_options[1][option][sort_order]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][record_type]" Value="Active" RecordedValue="Active" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][create_on]" Value="2015-04-06 14:21:03" RecordedValue="2015-04-06 14:21:03" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][last_update]" Value="2015-04-06 14:21:27" RecordedValue="2015-04-06 14:21:27" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][$$hashKey]" Value="object:101" RecordedValue="object:101" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][quantity]" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam9.selected_options[1][quantity]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][$$hashKey]" Value="object:230" RecordedValue="object:230" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][id]" Value="367" RecordedValue="367" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][parent_id]" Value="364" RecordedValue="364" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][copied_from_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][menu_item_id]" Value="15" RecordedValue="15" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][menu_option_category_type_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][max_category_items]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][name_key]" Value="Diced Tomatoes" RecordedValue="Diced Tomatoes" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][description_key]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][web_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][restaurant_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][is_default]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam10.selected_options[2][option][is_default]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][sort_order]" Value="3" RecordedValue="3" CorrelationBinding="{{FormPostParam11.selected_options[2][option][sort_order]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][record_type]" Value="Active" RecordedValue="Active" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][create_on]" Value="2015-04-06 14:21:03" RecordedValue="2015-04-06 14:21:03" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][last_update]" Value="2015-04-06 14:23:27" RecordedValue="2015-04-06 14:23:27" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][$$hashKey]" Value="object:102" RecordedValue="object:102" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][quantity]" Value="3" RecordedValue="3" CorrelationBinding="{{FormPostParam12.selected_options[2][quantity]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][$$hashKey]" Value="object:232" RecordedValue="object:232" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam13.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="f0e539f1-315d-4ea9-8958-82b850c698c1" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/set-order-item" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=26" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="restaurant_id" Value="26" RecordedValue="26" CorrelationBinding="{{FormPostParam14.restaurant_id}}" UrlEncode="True" />
+        <FormPostParameter Name="order_item_id" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam15.order_item_id}}" UrlEncode="True" />
+        <FormPostParameter Name="menu_item_id" Value="15" RecordedValue="15" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="quantity" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam16.quantity}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][id]" Value="365" RecordedValue="365" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][parent_id]" Value="364" RecordedValue="364" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][copied_from_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][menu_item_id]" Value="15" RecordedValue="15" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][menu_option_category_type_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][max_category_items]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][name_key]" Value="Grated Cheese" RecordedValue="Grated Cheese" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][description_key]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][web_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][restaurant_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][is_default]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam17.selected_options[0][option][is_default]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][sort_order]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam18.selected_options[0][option][sort_order]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][record_type]" Value="Active" RecordedValue="Active" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][create_on]" Value="2015-04-06 14:21:03" RecordedValue="2015-04-06 14:21:03" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][last_update]" Value="2015-04-06 14:21:27" RecordedValue="2015-04-06 14:21:27" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][$$hashKey]" Value="object:100" RecordedValue="object:100" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][quantity]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam19.selected_options[0][quantity]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][$$hashKey]" Value="object:228" RecordedValue="object:228" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][id]" Value="366" RecordedValue="366" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][parent_id]" Value="364" RecordedValue="364" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][copied_from_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][menu_item_id]" Value="15" RecordedValue="15" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][menu_option_category_type_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][max_category_items]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][name_key]" Value="Shreded Lettuce" RecordedValue="Shreded Lettuce" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][description_key]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][web_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][restaurant_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][is_default]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam20.selected_options[1][option][is_default]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][sort_order]" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam21.selected_options[1][option][sort_order]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][record_type]" Value="Active" RecordedValue="Active" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][create_on]" Value="2015-04-06 14:21:03" RecordedValue="2015-04-06 14:21:03" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][last_update]" Value="2015-04-06 14:21:27" RecordedValue="2015-04-06 14:21:27" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][$$hashKey]" Value="object:101" RecordedValue="object:101" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][quantity]" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam22.selected_options[1][quantity]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][$$hashKey]" Value="object:230" RecordedValue="object:230" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][id]" Value="367" RecordedValue="367" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][parent_id]" Value="364" RecordedValue="364" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][copied_from_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][menu_item_id]" Value="15" RecordedValue="15" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][menu_option_category_type_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][max_category_items]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][name_key]" Value="Diced Tomatoes" RecordedValue="Diced Tomatoes" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][description_key]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][web_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][restaurant_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][is_default]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam23.selected_options[2][option][is_default]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][sort_order]" Value="3" RecordedValue="3" CorrelationBinding="{{FormPostParam24.selected_options[2][option][sort_order]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][record_type]" Value="Active" RecordedValue="Active" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][create_on]" Value="2015-04-06 14:21:03" RecordedValue="2015-04-06 14:21:03" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][last_update]" Value="2015-04-06 14:23:27" RecordedValue="2015-04-06 14:23:27" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][$$hashKey]" Value="object:102" RecordedValue="object:102" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][quantity]" Value="3" RecordedValue="3" CorrelationBinding="{{FormPostParam25.selected_options[2][quantity]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][$$hashKey]" Value="object:232" RecordedValue="object:232" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam26.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="344e2141-3554-420c-8990-c9b34fc19073" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/set-order-item" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=26" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="restaurant_id" Value="26" RecordedValue="26" CorrelationBinding="{{FormPostParam27.restaurant_id}}" UrlEncode="True" />
+        <FormPostParameter Name="order_item_id" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam28.order_item_id}}" UrlEncode="True" />
+        <FormPostParameter Name="menu_item_id" Value="15" RecordedValue="15" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="quantity" Value="3" RecordedValue="3" CorrelationBinding="{{FormPostParam29.quantity}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][id]" Value="365" RecordedValue="365" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][parent_id]" Value="364" RecordedValue="364" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][copied_from_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][menu_item_id]" Value="15" RecordedValue="15" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][menu_option_category_type_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][max_category_items]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][name_key]" Value="Grated Cheese" RecordedValue="Grated Cheese" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][description_key]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][web_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][restaurant_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][is_default]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam30.selected_options[0][option][is_default]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][sort_order]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam31.selected_options[0][option][sort_order]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][record_type]" Value="Active" RecordedValue="Active" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][create_on]" Value="2015-04-06 14:21:03" RecordedValue="2015-04-06 14:21:03" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][last_update]" Value="2015-04-06 14:21:27" RecordedValue="2015-04-06 14:21:27" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][option][$$hashKey]" Value="object:100" RecordedValue="object:100" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][quantity]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam32.selected_options[0][quantity]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[0][$$hashKey]" Value="object:228" RecordedValue="object:228" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][id]" Value="366" RecordedValue="366" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][parent_id]" Value="364" RecordedValue="364" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][copied_from_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][menu_item_id]" Value="15" RecordedValue="15" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][menu_option_category_type_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][max_category_items]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][name_key]" Value="Shreded Lettuce" RecordedValue="Shreded Lettuce" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][description_key]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][web_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][restaurant_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][is_default]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam33.selected_options[1][option][is_default]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][sort_order]" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam34.selected_options[1][option][sort_order]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][record_type]" Value="Active" RecordedValue="Active" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][create_on]" Value="2015-04-06 14:21:03" RecordedValue="2015-04-06 14:21:03" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][last_update]" Value="2015-04-06 14:21:27" RecordedValue="2015-04-06 14:21:27" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][option][$$hashKey]" Value="object:101" RecordedValue="object:101" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][quantity]" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam35.selected_options[1][quantity]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[1][$$hashKey]" Value="object:230" RecordedValue="object:230" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][id]" Value="367" RecordedValue="367" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][parent_id]" Value="364" RecordedValue="364" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][copied_from_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][menu_item_id]" Value="15" RecordedValue="15" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][menu_option_category_type_id]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][max_category_items]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][name_key]" Value="Diced Tomatoes" RecordedValue="Diced Tomatoes" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][description_key]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][web_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][restaurant_price]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][is_default]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam36.selected_options[2][option][is_default]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][sort_order]" Value="3" RecordedValue="3" CorrelationBinding="{{FormPostParam37.selected_options[2][option][sort_order]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][record_type]" Value="Active" RecordedValue="Active" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][create_on]" Value="2015-04-06 14:21:03" RecordedValue="2015-04-06 14:21:03" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][last_update]" Value="2015-04-06 14:23:27" RecordedValue="2015-04-06 14:23:27" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][option][$$hashKey]" Value="object:102" RecordedValue="object:102" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][quantity]" Value="3" RecordedValue="3" CorrelationBinding="{{FormPostParam38.selected_options[2][quantity]}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options[2][$$hashKey]" Value="object:232" RecordedValue="object:232" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam39.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="49f6fe35-b375-453c-8eeb-27ab849fa7b2" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/set-order-item" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=26" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="restaurant_id" Value="26" RecordedValue="26" CorrelationBinding="{{FormPostParam40.restaurant_id}}" UrlEncode="True" />
+        <FormPostParameter Name="order_item_id" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam41.order_item_id}}" UrlEncode="True" />
+        <FormPostParameter Name="menu_item_id" Value="18" RecordedValue="18" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="quantity" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam42.quantity}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam43.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="a5f23931-cb41-4ed9-9ee5-728f41d82812" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/set-order-item" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=26" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="restaurant_id" Value="26" RecordedValue="26" CorrelationBinding="{{FormPostParam44.restaurant_id}}" UrlEncode="True" />
+        <FormPostParameter Name="order_item_id" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam45.order_item_id}}" UrlEncode="True" />
+        <FormPostParameter Name="menu_item_id" Value="18" RecordedValue="18" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="quantity" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam46.quantity}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam47.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="2b4a2f75-9ef2-4b0a-8a15-7a4e0cfd023a" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/set-order-item" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=26" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="restaurant_id" Value="26" RecordedValue="26" CorrelationBinding="{{FormPostParam48.restaurant_id}}" UrlEncode="True" />
+        <FormPostParameter Name="order_item_id" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam49.order_item_id}}" UrlEncode="True" />
+        <FormPostParameter Name="menu_item_id" Value="18" RecordedValue="18" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="quantity" Value="3" RecordedValue="3" CorrelationBinding="{{FormPostParam50.quantity}}" UrlEncode="True" />
+        <FormPostParameter Name="selected_options" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam51.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="aaccc810-e653-4c81-adcb-8ff62acb2896" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/set-order-item" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=26" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="restaurant_id" Value="26" RecordedValue="26" CorrelationBinding="{{FormPostParam52.restaurant_id}}" UrlEncode="True" />
+        <FormPostParameter Name="order_item_id" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam53.order_item_id}}" UrlEncode="True" />
+        <FormPostParameter Name="menu_item_id" Value="18" RecordedValue="18" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="quantity" Value="4" RecordedValue="4" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam54.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="5e0c058c-db24-412a-8718-390f730882fa" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/set-order-item" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=26" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="restaurant_id" Value="26" RecordedValue="26" CorrelationBinding="{{FormPostParam55.restaurant_id}}" UrlEncode="True" />
+        <FormPostParameter Name="order_item_id" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam56.order_item_id}}" UrlEncode="True" />
+        <FormPostParameter Name="menu_item_id" Value="18" RecordedValue="18" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="quantity" Value="5" RecordedValue="5" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="selected_options" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam57.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="f6f884b2-3981-483d-b8e0-f156f13d6c92" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/set-voucher" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=26" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="code" Value="sasha_10" RecordedValue="sasha_10" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam58.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="fcff6885-39bd-417f-a725-31c3fffaa25b" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/set-driver-charge" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/restaurant/view?id=26" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="driver_charge" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam59.driver_charge}}" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam60.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="da511702-6931-4b37-acbc-ca032cae7fbb" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/get-order" ThinkTime="101" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/order/checkout" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="6f468b1d-1682-41cd-b1a1-813d8e06fbb5" Version="1.1" Url="{{GATEWAY_SERVER}}/v1/common/checkout" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/plain, */*" />
+        <Header Name="Referer" Value="{{FRONTEND_SERVER}}/order/checkout" />
+      </Headers>
+      <ValidationRules>
+        <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Find Text" Description="Verifies the existence of the specified text in the response." Level="High" ExectuionOrder="BeforeDependents">
+          <RuleParameters>
+            <RuleParameter Name="FindText" Value="{&quot;status_code&quot;:0,&quot;data&quot;:true}" />
+            <RuleParameter Name="IgnoreCase" Value="True" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="PassIfTextFound" Value="True" />
+          </RuleParameters>
+        </ValidationRule>
+      </ValidationRules>
+      <FormPostHttpBody>
+        <FormPostParameter Name="additional_requirements" Value="additional for test" RecordedValue="additional for test" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="include_utensils" Value="true" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="delivery_address[title]" Value="mr" RecordedValue="mr" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="delivery_address[first_name]" Value="web" RecordedValue="web" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="delivery_address[last_name]" Value="test" RecordedValue="test" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="delivery_address[address1]" Value="browser" RecordedValue="browser" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="delivery_address[city]" Value="kharkov" RecordedValue="kharkov" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="delivery_address[postcode]" Value="61000" RecordedValue="61000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="delivery_address[phone]" Value="987654" RecordedValue="987654" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="delivery_address[email]" Value="a@a.a" RecordedValue="a@a.a" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="billing_address[title]" Value="mr" RecordedValue="mr" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="billing_address[first_name]" Value="btest" RecordedValue="btest" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="billing_address[last_name]" Value="blast" RecordedValue="blast" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="billing_address[address1]" Value="performance" RecordedValue="performance" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="billing_address[city]" Value="kharkov" RecordedValue="kharkov" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="billing_address[postcode]" Value="61000" RecordedValue="61000" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="billing_address[phone]" Value="985698" RecordedValue="985698" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="billing_address[email]" Value="b@b.b" RecordedValue="b@b.b" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="client_key" Value="{{CLIENT_KEY}}" RecordedValue="3" CorrelationBinding="{{FormPostParam61.client_key}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+  </Items>
+  <ContextParameters>
+    <ContextParameter Name="GATEWAY_SERVER" Value="http://gateway.dinein.loc" />
+    <ContextParameter Name="FRONTEND_SERVER" Value="http://frontend.dinein.loc" />
+    <ContextParameter Name="client_key" Value="{{CLIENT_KEY}}" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

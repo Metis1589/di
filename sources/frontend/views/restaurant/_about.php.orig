@@ -1,0 +1,91 @@
+<?php
+/* @var $this yii\web\View */
+<<<<<<< Updated upstream
+?>
+
+<h1><?= $model['name'] ?> ABOUT</h1>
+
+<div>
+
+    <table style="width: 100%">
+        <tr valign="top">
+            <td>
+                <h3>Description</h3>
+                <?php
+                $description = Yii::$app->frontendCache->getLabelByLanguage(Yii::$app->translationLanguage->language,$model['description'],$model['description']);
+                echo \yii\helpers\Html::decode($description);
+                ?>
+            </td>
+            <td width="200">
+                <h3>Address</h3>
+
+                Address goes here
+=======
+>>>>>>> Stashed changes
+
+use frontend\components\language\T;
+?>
+
+<?= print_r($model) ?>
+
+<h3 class="form_devider only_desctop"><?= $model['name'] ?></h3>
+<div class="content_set_inner">
+    <div class="content_set_left">
+        <h4><?= T::l('ABOUT') ?></h4>
+        <p><?= $model['description'] ?></p>
+    </div>
+    <div class="content_set_right">
+        <h4><?= T::l('ADDRESS') ?></h4>
+        <table>
+            <tr>
+                <td>10 Jamestown Road
+                    Camden, NW1 7BY</td>
+                <td></td>
+            </tr>
+        </table>
+        <h4><?= T::l('Delivery Hours') ?></h4>
+        <table>
+            <tr>
+                <td>Monday – Thursday</td>
+                <td>12:30 – 22:00</td>
+            </tr>
+            <tr>
+                <td>Friday – Saturday</td>
+                <td>12:30 – 22:30</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>12:30 – 21:00</td>
+            </tr>
+        </table>
+        <h4><?= T::l('Opening Hours') ?></h4>
+        <table>
+            <tr>
+                <td>Monday – Thursday</td>
+                <td>12:30 – 23:00</td>
+            </tr>
+            <tr>
+                <td>Friday – Saturday</td>
+                <td>12:30 – 23:30</td>
+            </tr>
+            <tr>
+                <td>Sunday</td>
+                <td>12:30 – 22:00</td>
+            </tr>
+        </table>
+        <table class="atributes">
+            <tr>
+                <td><?= T::l('Minimum Order') ?></td>
+                <td>£15.00</td>
+            </tr>
+            <tr>
+                <td><?= T::l('Delivery Charge') ?></td>
+                <td>£3.00</td>
+            </tr>
+            <tr>
+                <td><?= T::l('Collection Charge ') ?></td>
+                <td>Free</td>
+            </tr>
+        </table>
+    </div>
+</div>

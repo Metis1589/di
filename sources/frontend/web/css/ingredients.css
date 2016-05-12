@@ -1,0 +1,64 @@
+.ingredients {
+    padding-top: 60px;
+}
+.ingredients h1 {
+    text-align: center;
+    font-size: 56px;
+    font-family: 'ProximaNova-Black', sans-serif;
+    line-height: 200px;
+    color: #fff;
+    background: url(../img/bg5.jpg) center;
+    background-size: cover;
+}
+.ingredients .allergens,
+.ingredients .lifestyles {
+    width: 300px;
+    float: left;
+    margin:  40px 125px 0;
+}
+.ingredients h5 {
+    text-align: center;
+    color: #F58426;
+    padding-bottom: 15px;
+    border-bottom: solid 1px #A1A1A4;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.ingredients p {
+    height: 0;
+    line-height: 17px;
+    padding-left: 37px;
+}
+.ingredients p,
+.ingredients h6 {
+    color: #A1A1A4;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+.ingredients .allergens ul {
+}
+.ingredients .allergens li,
+.ingredients .lifestyles li {
+    overflow: hidden;
+    padding-left: 10px;
+}
+.ingredients .allergens li:hover p,
+.ingredients .lifestyles li:hover p {
+    height: 100%;
+    margin-bottom: 10px;
+}
+.ingredients .allergens li:hover h6,
+.ingredients .lifestyles li:hover h6 {
+    color: #F58426;
+}
+.ingredients .allergens img,
+.ingredients .lifestyles img {
+    width: 21px;
+    height: 21px;
+    float: left;
+    margin-right: 15px;
+}
+.ingredients .allergens h6,
+.ingredients .lifestyles h6 {
+    margin: 2px 0 11px;
+}

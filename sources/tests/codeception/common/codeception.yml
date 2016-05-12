@@ -1,0 +1,27 @@
+namespace: tests\codeception\common
+actor: Tester
+paths:
+    tests: .
+    log: _output
+    data: _data
+    helpers: _support
+modules:
+  enabled: [Db  ]
+  config:
+    Db:
+      dsn: 'mysql:host=server;dbname=dinein_test'
+      user: 'alex.popov'
+      password: 'P@ssword1'
+#      dsn: 'mysql:host=localhost;dbname=dinein_test'
+#      user: 'root'
+#      password: 'root'
+      dump: '_data/dump.sql'
+      populate: true
+      cleanup: false
+
+settings:
+    bootstrap: _bootstrap.php
+    suite_class: \PHPUnit_Framework_TestSuite
+    colors: true
+    memory_limit: 1024M
+    log: true

@@ -1,0 +1,8 @@
+class_name: ApiGuy
+modules:
+    enabled: [PhpBrowser, REST, ApiHelper]
+    config:
+      PhpBrowser:
+          url: http://gateway.dinein.loc/
+      REST:
+          url: http://gateway.dinein.loc/v1/
